@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="dom-interaction.js" defer></script>
+    <title>The Maze</title>
+</head>
+<body>
+    <div id="room-name-container">
+        <h1 id="room-name">STARTING ROOM</h1>
+    </div>
+    <div id="main-container">
+        <div class="door-container">
+            <h1 class="door-title">DOOR 1</h1>
+            <button id="door-one"></button>
+        </div>
+        <div class="door-container">
+            <h1 class="door-title">DOOR 2</h1>
+            <button id="door-two"></button>
+        </div>
+        <div class="door-container">
+            <h1 class="door-title">DOOR 3</h1>
+            <button id="door-three"></button>
+        </div>
+    </div>
+    <dialog id="death-dialog">
+        <div id="death-dialog-container">
+            <img src="images/cthulhu.png" alt="Cthulhu">
+            <h1>YOU HAVE BEEN KILLED</h1>
+        </div>
+    </dialog>
+    <dialog id="win-dialog">
+        <div id="win-dialog-container">
+            <img src="images/present.png" alt="Present">
+            <h1>CONGRADULATIONS! YOU HAVE COMPLETED THE MAZE</h1>
+        </div>
+    </dialog>
+</body>
+</html>
