@@ -56,8 +56,8 @@ const domInteraction = (function() {
     })
 
     domCache.doorThree.addEventListener('click', () => {
-        maze.gameEndCheck(maze.doors.doorTwo);
-        matchRoomColor(maze.doors.doorTwo)
+        maze.gameEndCheck(maze.doors.doorThree);
+        matchRoomColor(maze.doors.doorThree)
         maze.moveToNextRoom();
     })
 
