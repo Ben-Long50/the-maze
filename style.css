@@ -54,6 +54,7 @@ body {
 
 dialog {
     padding: 0;
+    max-width: 50%;
 }
 
 dialog::backdrop {

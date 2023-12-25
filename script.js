@@ -5,8 +5,8 @@ const maze = (function() {
     let roomPosition2 = 3;
 
     const rooms = {
-        warmRoom: ['red', 'orange', 'yellow', 'death'],
-        coldRoom: ['green', 'blue', 'purple', 'death'],
+        warmRoom: ['red', 'orange', 'death', 'yellow'],
+        coldRoom: ['green', 'death', 'purple', 'blue'],
         monochromeRoom: ['white', 'black', 'grey', 'death']
     }
 
@@ -33,12 +33,12 @@ const maze = (function() {
     function assignDoors() {
         if(mazeCounter % 2 !== 0 && mazeCounter % 3 !== 0) {
             doors.doorOne = rooms.warmRoom[countForwards()];
-            doors.doorTwo = rooms.warmRoom[countForwards()];
+            doors.doorTwo = rooms.warmRoom[countBackwards()];
             doors.doorThree = rooms.warmRoom[countForwards()];
         }
         else if(mazeCounter % 2 === 0) {
             doors.doorOne = rooms.coldRoom[countBackwards()];
-            doors.doorTwo = rooms.coldRoom[countBackwards()];
+            doors.doorTwo = rooms.coldRoom[countForwards()];
             doors.doorThree = rooms.coldRoom[countBackwards()];
         }
         else if(mazeCounter % 3 === 0) {
@@ -67,7 +67,7 @@ const maze = (function() {
         if(chosenDoor === 'death') {
             domInteraction.openDeathDialog();
         }
-        else if(currentCount === 30) {
+        else if(currentCount === 31) {
             domInteraction.openWinDialog();
         }
     }
